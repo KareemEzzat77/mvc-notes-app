@@ -47,7 +47,7 @@ class AuthController extends Controller
         if (!empty($errors)) {
             Session::flash('errors', $errors);
             Session::flash('old', $_POST);
-            return $this->redirect('auth/register');
+            return redirect('auth/register');
         }
 
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -55,7 +55,7 @@ class AuthController extends Controller
 
         (new AuthService())->attempt($email, $_POST['password']);
         Session::flash('success', 'تم تسجيل الحساب بنجاح');
-        return $this->redirect('notes');
+        return redirect('notes');
     }
     public function showLogin()
     {
@@ -90,10 +90,10 @@ class AuthController extends Controller
         if (!empty($errors)) {
             Session::flash('errors', $errors);
             Session::flash('old', $_POST);
-            return $this->redirect('auth/login');
+            return redirect('auth/login');
         }
 
-        return $this->redirect('notes');
+        return redirect('notes');
     }
 
 
@@ -102,6 +102,6 @@ class AuthController extends Controller
         $auth = new AuthService();
         $auth->logout();
 
-        return $this->redirect('auth/login');
+        return redirect('auth/login');
     }
 }
