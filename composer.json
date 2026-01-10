@@ -1,0 +1,9 @@
+{
+    "name": "mhmd/medium-mvc",
+    "autoload": {
+        "psr-4": {
+            "Main\\": "app/"
+        }
+    },
+    "require": {}
+}
