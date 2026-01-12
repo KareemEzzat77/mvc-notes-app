@@ -4,11 +4,11 @@ namespace Main\controllers;
 
 use Main\core\Session;
 use Main\core\Validator;
-use Main\core\Controller;
 use Main\core\AuthService;
+use Main\core\BaseController;
 use Main\models\User;
 
-class AuthController extends Controller
+class AuthController extends BaseController
 {
     public function showRegister()
     {

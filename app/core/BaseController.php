@@ -2,7 +2,7 @@
 
 namespace Main\core;
 // Define the Controller class
-class Controller
+class BaseController
 {
     protected function loadModel($model)
     {

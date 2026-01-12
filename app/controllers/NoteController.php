@@ -2,11 +2,11 @@
 
 namespace Main\controllers;
 
-use Main\core\Controller;
+use Main\core\BaseController;
 use Main\core\Session;
 use Main\core\Validator;
 
-class NoteController extends Controller
+class NoteController extends BaseController
 {
     public function index()
     {
