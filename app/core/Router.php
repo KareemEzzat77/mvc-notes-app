@@ -16,16 +16,6 @@ class Router
         return $this->add('POST', $uri, $action);
     }
 
-    public function put($uri, $action)
-    {
-        return $this->add('PUT', $uri, $action);
-    }
-
-    public function delete($uri, $action)
-    {
-        return $this->add('DELETE', $uri, $action);
-    }
-
     protected function add($method, $uri, $action)
     {
         $this->routes[] = [
